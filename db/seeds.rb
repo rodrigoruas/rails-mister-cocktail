@@ -26,12 +26,12 @@ cocktails_attributes = [
 Ingredient.destroy_all
 ingredients_attributes = [
   {
-    name:         "Limao"
+    name:         "Lemon"
 
   },
 
   {
-    name:         "Açucar"
+    name:         "Sugar"
 
   },
 
@@ -46,7 +46,17 @@ ingredients_attributes = [
   },
 
   {
-    name:         "Morango"
+    name:         "Strawberry"
+
+  },
+
+  {
+    name:         "Ice"
+
+  },
+
+  {
+    name:         "RedBull"
 
   }
 
