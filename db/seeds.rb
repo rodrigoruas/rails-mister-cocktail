@@ -33,6 +33,21 @@ ingredients_attributes = [
   {
     name:         "Açucar"
 
+  },
+
+  {
+    name:         "Vodka"
+
+  },
+
+  {
+    name:         "Cachaça"
+
+  },
+
+  {
+    name:         "Morango"
+
   }
 
 

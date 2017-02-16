@@ -1,16 +1,17 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
-
 
 <div class="container">
   <div class="row">
     <div class="col-xm-12 col-md-12 col-lg-12">
-      <h2>Nome: <%= "#{@cocktail.name}"%> </h2>
+      <h2><%= "#{@cocktail.name}"%> </h2>
        <% @cocktail.doses.each do |dose| %>
+
         <ul class="list-group">
           <li class="list-group-item">
             <p>Ingrediente: <%= "#{dose.ingredient.name} "%></p>
-            <p>Descrição <%= "#{dose.description} "%></p>
+            <p>Descrição: <%= "#{dose.description} "%></p>
+            <div class="buttons">
+              <button type="button" class="btn btn-primary btn-sm"><%= link_to "Delete", dose_path(dose), method: :delete %></button>
+            </div>
           </li>
         </ul>
       <%end%>
@@ -23,13 +24,17 @@
   <h3>Adicionar Dose:</h3>
   <%= simple_form_for [@cocktail, @dose] do |f| %>
 
-    <p><%= f.input :description %></p>
-    <p><%= f.association :ingredient %></p>
+    <p><%= f.input :description, as: :text, input_html: { class: 'test', :cols => 30, :rows => 10 } %></p>
+    <p><%= f.association :ingredient,  input_html: {style: 'width: 200px'} %></p>
     <p><%= f.input :cocktail_id, as: :hidden, value: @cocktail.id %></p>
-    <div class="edit-button">
-      <button class="btn  btn-outline-success btn-sm">Add!</button>
-
-    </div>
+    <div class="form-button">
+      <button class="btn btn-primary btn-sm">Add!</button>
+    <div class="form-button">
   <% end %>
+  <div class="form-button" style="position: relative; left: 100px; top:-33px;">
+    <%= link_to cocktails_path, :class => "form-button" do %>
+       <button class="btn btn-primary btn-sm">Back!</button>
+    <% end %>
+  <div class="form-button">
 </div>
 
