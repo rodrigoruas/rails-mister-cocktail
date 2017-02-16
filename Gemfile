@@ -5,6 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+group :development do
+  gem "better_errors"
+end
+
+gem "binding_of_caller"
 
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
