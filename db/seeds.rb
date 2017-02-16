@@ -21,3 +21,21 @@ cocktails_attributes = [
 ]
 
   cocktails_attributes.each { |params| Cocktail.create!(params) }
+
+
+Ingredient.destroy_all
+ingredients_attributes = [
+  {
+    name:         "Limao"
+
+  },
+
+  {
+    name:         "Açucar"
+
+  }
+
+
+]
+
+  ingredients_attributes.each { |params| Ingredient.create!(params) }

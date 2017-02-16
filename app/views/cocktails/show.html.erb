@@ -1,2 +1,35 @@
 <h1>Cocktails#show</h1>
 <p>Find me in app/views/cocktails/show.html.erb</p>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xm-12 col-md-12 col-lg-12">
+      <h2>Nome: <%= "#{@cocktail.name}"%> </h2>
+       <% @cocktail.doses.each do |dose| %>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <p>Ingrediente: <%= "#{dose.ingredient.name} "%></p>
+            <p>Descrição <%= "#{dose.description} "%></p>
+          </li>
+        </ul>
+      <%end%>
+    </div>
+  </div>
+
+
+
+
+  <h3>Adicionar Dose:</h3>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+
+    <p><%= f.input :description %></p>
+    <p><%= f.association :ingredient %></p>
+    <p><%= f.input :cocktail_id, as: :hidden, value: @cocktail.id %></p>
+    <div class="edit-button">
+      <button class="btn  btn-outline-success btn-sm">Add!</button>
+
+    </div>
+  <% end %>
+</div>
+
