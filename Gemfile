@@ -9,6 +9,8 @@ group :development do
   gem "better_errors"
 end
 
+gem 'figaro'
+
 gem 'rails-controller-testing'
 
 gem "binding_of_caller"
