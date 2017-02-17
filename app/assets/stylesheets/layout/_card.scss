@@ -25,6 +25,7 @@
 }
 .card-description h2 {
   font-size: 24px;
+  z-index: 10 !important;
 }
 .card-description p {
   font-size: 13px;
@@ -35,9 +36,5 @@
   bottom: 0;
   right: 0;
   width: 100%;
+}
 
-  opacity: 0;
-}
-.card-link:hover{
-  opacity: 0.1;
-}
