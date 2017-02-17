@@ -3,6 +3,7 @@
   <div class="row">
     <div class="col-xm-12 col-md-12 col-lg-12">
       <h2><%= "#{@cocktail.name}"%> </h2>
+      <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
        <% @cocktail.doses.each do |dose| %>
 
         <ul class="list-group">
@@ -24,7 +25,7 @@
   <h3>Adicionar Dose:</h3>
   <%= simple_form_for [@cocktail, @dose] do |f| %>
 
-    <p><%= f.input :description, as: :text, input_html: { class: 'test', :cols => 30, :rows => 10 } %></p>
+    <p><%= f.input :description, as: :text, input_html: { class: 'test', :cols => 5, :rows => 5 } %></p>
     <p><%= f.association :ingredient,  input_html: {style: 'width: 200px'} %></p>
     <p><%= f.input :cocktail_id, as: :hidden, value: @cocktail.id %></p>
     <div class="form-button">
@@ -33,7 +34,7 @@
   <% end %>
   <div class="form-button" style="position: relative; left: 100px; top:-33px;">
     <%= link_to cocktails_path, :class => "form-button" do %>
-       <button class="btn btn-primary btn-sm">Back!</button>
+       <button class="btn btn-primary btn-sm">Back to Index!</button>
     <% end %>
   <div class="form-button">
 </div>

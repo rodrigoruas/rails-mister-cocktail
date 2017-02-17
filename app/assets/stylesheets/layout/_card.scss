@@ -1,17 +1,10 @@
 .card {
-  height: 250px;
-  width: 250px;
+  height: 175px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
-  color: black;
+  color: white;
   position: relative;
-  background-color: #d9f4d2;
-  margin: 10px;
-
-}
-
-.card-buttons {
-  position: relative;
-  top: 100px;
+  margin:10px;
 }
 .card-user {
   position: absolute;
@@ -27,7 +20,7 @@
 }
 .card-description {
   position: absolute;
-  top: 20px;
+  bottom: 10px;
   left: 10px;
 }
 .card-description h2 {
@@ -42,8 +35,7 @@
   bottom: 0;
   right: 0;
   width: 100%;
-  z-index:2;
-  background: black;
+
   opacity: 0;
 }
 .card-link:hover{

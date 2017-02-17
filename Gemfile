@@ -9,6 +9,10 @@ group :development do
   gem "better_errors"
 end
 
+gem 'carrierwave', '~> 1.0'
+
+gem 'cloudinary', '1.1.0'
+
 gem 'figaro'
 
 gem 'rails-controller-testing'

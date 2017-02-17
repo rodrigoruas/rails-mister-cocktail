@@ -3,8 +3,6 @@
 
 <%= simple_form_for [@cocktail] do |f| %>
 
-
-
     <div class="container">
 
       <div class="row">
@@ -12,6 +10,8 @@
           <div class="form-card">
              <h3>Adicione aqui seu cocktail! Seja Criativo!</h3>
             <p><%= f.input :name %></p>
+            <p><%= f.input :photo %></p>
+            <%= f.input :photo_cache, as: :hidden %>
             <div class="form-button">
             <button class="btn  btn btn-primary btn-sm">Add!</button>
              </div>
